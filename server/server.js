@@ -52,7 +52,7 @@ const verify_token = function(req, res, next){
 }
 
 // PAGE ROUTES
-app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'ui/login.html')))
 app.get('/login', (req, res) => res.sendFile(path.join(__dirname, 'ui/login.html')))
 app.get('/homepage', (req, res) => res.sendFile(path.join(__dirname, 'ui/homepage.html')))
 app.get('/vote', (req, res) => res.sendFile(path.join(__dirname, 'ui/entry.html')))
